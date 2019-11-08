@@ -127,7 +127,7 @@ An `task` one of the steps needed to complete the project. We want to store the 
 - [ ] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
 
 ## Stretch Problem
-
+"
 This section is **optional** and not counted towards MVP. Start working on it after you're done with the main assignment.
 
 Add an endpoint for retrieving a `project` by its `id` that returns an object with the following structure:

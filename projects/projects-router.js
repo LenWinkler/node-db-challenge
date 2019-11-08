@@ -5,6 +5,7 @@ const router = require('express').Router();
 router.get('/projects', (req, res) => {
     Projects.getProjects()
     .then(response => {
+        console.log(response);
         res.status(200).json(response)
     })
     .catch(err => {
@@ -38,6 +39,7 @@ router.get('/tasks', (req, res) => {
 router.post('/projects', (req, res) => {
     Projects.addProject(req.body)
     .then(response => {
+        console.log(response)
         res.status(201).json(response)
     })
     .catch(err => {

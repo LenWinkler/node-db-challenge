@@ -25,6 +25,7 @@ function addProject(project) {
     return db('projects')
     .insert(project, ['id', 'name', 'description', 'completed'])
     .then(response => {
+        console.log(response);
         return response
     })
 };

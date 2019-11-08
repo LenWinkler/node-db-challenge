@@ -28,7 +28,13 @@ router.get('/resources', (req, res) => {
 router.get('/tasks', (req, res) => {
     Projects.getTasks()
     .then(response => {
-        res.status(200).json(response)
+        const result = response.map(item => {
+            return {
+                ...item,
+                completed: item.completed === 1 ? true : false
+            }
+        });
+        res.status(200).json(result)
     })
     .catch(err => {
         console.log('get tasks error', err);

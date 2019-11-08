@@ -14,7 +14,7 @@ function getProjects() {
 };
 
 function getTasks() {
-    return db('tasks')
+    return db.raw('select tasks.*, projects.name, projects.description as projectDescription from tasks join projects on tasks.project_id = projects.id')
 };
 
 function getResources() {

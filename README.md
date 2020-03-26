@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+  A relational database is one kind of database. SQL is a query language designed specifically for interacting with relational databases.
+
 - [ ] Why do tables need a `primary key`?
+
+  Each row needs a unique identifier.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+  Foreign key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+  Each table has entries that are related to many entries on the other table.
 
 ## Minimum Viable Product
 
@@ -88,7 +96,7 @@ The API should return:
 - a `task` belongs to only one `project`.
 - a `project` can use multiple `resources`.
 - the same `resource` can be used in multiple `projects`.
-- when adding `projects` the client must provide a name, the description is optional.
+- when adding `projects` the client must provide a name, the description is optional. 
 - when adding `resources` the client must provide a name, the description is optional.
 - when adding a `task` the client must provide a description, the notes are optional.
 - when adding a `task` the client must provide the `id` of an existing project.
@@ -119,7 +127,7 @@ An `task` one of the steps needed to complete the project. We want to store the 
 - [ ] a boolean that indicates if the task has been completed. This column cannot be NULL, the default value should be `false`.
 
 ## Stretch Problem
-
+"
 This section is **optional** and not counted towards MVP. Start working on it after you're done with the main assignment.
 
 Add an endpoint for retrieving a `project` by its `id` that returns an object with the following structure:
